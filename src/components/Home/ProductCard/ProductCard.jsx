@@ -4,12 +4,12 @@ const imgLinkEx = 'https://images.pexels.com/photos/5858235/pexels-photo-5858235
 const ProductCard = () => {
     return(
         <>
-            <article>
-                <div>
+            <article className='card'>
+                <div className='cardImgCont'>
                     <img src={imgLinkEx} />
                 </div>
-                <div>
-                    <h3>Nombre producto</h3>
+                <div className='cardTxtCont'>
+                    <h6>Nombre producto</h6>
                     <p>Descripción producto</p>
                 </div>
             </article>

@@ -95,3 +95,8 @@ p {
 .serif {
     font-family: $second-type;
 }
+
+.italic {
+    font-style: italic;
+    font-variation-settings: 'ital' 1;
+}

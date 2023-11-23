@@ -57,6 +57,10 @@ $text-xxxl: calc($text-base-size * ($text-scale-ratio*6));
 
 // Editamos directamente los elementos txt
 
+* {
+    font-family: $main-type;
+}
+
 h1 {
     font-family: $main-type;
     @extend %h1;

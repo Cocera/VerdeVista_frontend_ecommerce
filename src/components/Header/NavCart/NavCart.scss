@@ -1,0 +1,21 @@
+.cartCont {
+    display: flex;
+}
+
+.shoppingCart {
+    position: relative;
+}
+
+.stickerPriceCart {
+    font-size: xx-small;
+    background-color: rgb(224, 224, 224);
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15px; right:70px;
+    width: auto; height: 24px;
+    min-width: 24px;
+    border-radius: 100px;
+    text-align: center;
+}

@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /* set base values */
-$main-type: 'Work Sans', sans-serif;
-$second-type: 'Noto Serif', serif;
+$main-type: 'IBM Plex Sans', sans-serif;
 $text-base-size: 1em;
 $text-scale-ratio: 0.5;
 
-/* template font-weight */
 $text-xs: calc($text-base-size * ($text-scale-ratio*2.1));
 $text-sm: calc($text-base-size * ($text-scale-ratio*2.5));
 $text-md: calc($text-base-size * ($text-scale-ratio*3));
@@ -16,44 +13,40 @@ $text-xl: calc($text-base-size * ($text-scale-ratio*4));
 $text-xxl: calc($text-base-size * ($text-scale-ratio*5));
 $text-xxxl: calc($text-base-size * ($text-scale-ratio*6));
 
-
-// Editamos herencia para los elementos txt
-
 %h1 {
-    font-size: $text-xxxl;
-    font-weight: 700;
+    font-size: $text-xxl;
+    font-weight: 600;
 }
 
 %h2 {
-    font-size: $text-xxl;
-    font-weight: 700;
-}
-
-%h3 {
     font-size: $text-xl;
     font-weight: 600;
 }
 
-%h4 {
+%h3 {
     font-size: $text-lg;
     font-weight: 600;
 }
 
-%h5 {
+%h4 {
     font-size: $text-md;
+    font-weight: 600;
+}
+
+%h5 {
+    font-size: $text-sm;
     font-weight: 500;
 }
 
 %h6 {
-    font-size: $text-sm;
-    font-weight: 400;
+    font-size: $text-xs;
+    font-weight: 500;
 }
 
 %p {
     font-size: $text-xs;
     font-weight: 300;
 }
-
 
 // Editamos directamente los elementos txt
 
@@ -96,11 +89,11 @@ p {
     @extend %p;
 }
 
-.serif {
-    font-family: $second-type;
-}
-
 .italic {
     font-style: italic;
     font-variation-settings: 'ital' 1;
+}
+
+.bold {
+    font-weight: 600;
 }

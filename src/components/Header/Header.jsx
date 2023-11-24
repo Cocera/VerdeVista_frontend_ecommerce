@@ -4,7 +4,9 @@ import './Header.scss';
 const Header = () => {
     return (
         <>
-            < Nav />
+            <header>
+                < Nav />
+            </header>
         </>
     );
 };

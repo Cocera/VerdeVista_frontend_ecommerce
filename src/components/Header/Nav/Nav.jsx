@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './Nav.scss';
 import NavCart from '../NavCart/NavCart.jsx';
 import NavUserProfile from '../NavUserProfile/NavUserProfile.jsx';
+import SearchBar from '../SearchBar/SearchBar.jsx';
 
 
 const Nav = () => {
@@ -31,7 +32,9 @@ const Nav = () => {
                     <li className="material-symbols-outlined menuIcon" onClick={toggleMenu}>{menuIsClosed ? 'close' : 'menu'}</li>
                 </ul>
                 <ul className={`navDropDown ${menuIsClosed ? 'open' : ''}`}>
-                    <li>Link</li>
+                    <li>
+                        < SearchBar />
+                    </li>
                     <li>Link</li>
                     <li>Link</li>
                     <li>Link</li>

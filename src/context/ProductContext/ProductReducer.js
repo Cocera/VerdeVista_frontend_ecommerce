@@ -1,5 +1,5 @@
 const products = (state, action) => {
-    switch (key) {
+    switch (action.type) {
 
         case 'GET_PRODUCTS':
             return {

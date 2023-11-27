@@ -1,15 +1,15 @@
 import './ProductCard.scss';
 
-const ProductCard = (props) => {
+const ProductCard = (product) => {
     return(
         <>
-            <article key={props.id} className='card'>
+            <article key={product.id} className='card'>
                 <div className='cardImgCont'>
-                    <img src={props.img} />
+                    <img src={product.img} />
                 </div>
                 <div className='cardTxtCont'>
-                    <h6>{props.name}</h6>
-                    <p>{props.description}</p>
+                    <h6>{product.name}</h6>
+                    <p>{product.description}</p>
                 </div>
             </article>
         </>

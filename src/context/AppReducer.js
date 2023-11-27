@@ -1,12 +1,12 @@
-const characters = (state, action) => {
+const products = (state, action) => {
     switch (action.type) {
-      case "GET_CHARACTERS":
+      case "GET_PRODUCTS":
         return {
           ...state,
-          characters: action.payload,
+          products: action.payload,
         };
       default:
         return state;
     }
   };
-  export default characters;  
+  export default products;  

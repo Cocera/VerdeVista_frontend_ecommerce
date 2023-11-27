@@ -1,14 +1,18 @@
 import ProductCard from '../ProductCard/ProductCard';
 import './ProductCollection.scss';
 
-const ProductCollection = (props) => {
+const linkPrueba = 'https://images.pexels.com/photos/5858235/pexels-photo-5858235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+
+
+const ProductCollection = () => {
+
     return (
         <>
-            <section key={props.id} className='ProductSection'>
+            <section className='ProductSection'>
                 <h2>{props.collectionTitle}</h2>
                 <div className='ProductSectionCards'>
-                    {props.arrProducts.map((product) => {
-                        return <ProductCard name={product.name} description={product.description} img={product.img} id={product.id}/>
+                    {products.map((product) => {
+                        return <ProductCard name={product.name} description={product.description} img={linkPrueba} id={product.id}/>
                     })}
                 </div>
             </section>

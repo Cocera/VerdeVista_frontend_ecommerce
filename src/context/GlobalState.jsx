@@ -4,22 +4,20 @@ import axios from 'axios';
 
 
 const initialState = {
-  characters: []
+  products: []
 }
-
 
 export const GlobalContext = createContext(initialState);
 
-
-export const GlobalProvider = () => {
+export const ProductProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
-    const getCharacters = async () => {
+    const getProducts = async () => {
         try {
-            const res = await axios.get("https://rickandmortyapi.com/api/character");
+            const res = await axios.get("http://localhost:8080/products");
             const action = {
-                type: "GET_CHARACTERS",
-                payload: res.data.results,
+                type: "GET_PRODUCTS",
+                payload: res.data,
               };
               dispatch(action);
         } catch (error) {
@@ -29,8 +27,8 @@ export const GlobalProvider = () => {
         return (
             <GlobalContext.Provider
               value={{
-                characters: state.characters,
-                getCharacters,
+                products: state.characters,
+                getProducts,
               }}
             >
               {children}

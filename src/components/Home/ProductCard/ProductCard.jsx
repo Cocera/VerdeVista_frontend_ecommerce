@@ -5,7 +5,8 @@ const ProductCard = (product) => {
         <>
             <article key={product.id} className='card'>
                 <div className='cardImgCont'>
-                    <img src={product.img} />
+                    <img className='first_img' src={product.img} />
+                    <img src={product.second_img} />
                 </div>
                 <div className='cardTxtCont'>
                     <h6>{product.name}</h6>

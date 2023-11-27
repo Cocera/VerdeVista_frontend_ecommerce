@@ -14,11 +14,13 @@ article.card {
             object-fit: cover;
             width: 100%;
             height: 100%;
-        }
-    }
+            transition: opacity 0.5s ease-in-out; // Para animar la opacidad de una foto a otra
+        };
+    }      
+
     div.cardTxtCont {
         padding: 5px 17px;
         text-align: center;
         width: 100%; height: 25%;
     }
-}
+};

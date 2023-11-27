@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import './Nav.scss';
 import NavCart from '../NavCart/NavCart.jsx';
+import NavUserProfile from '../NavUserProfile/NavUserProfile.jsx';
 
 
 const Nav = () => {
@@ -19,9 +20,12 @@ const Nav = () => {
                     <li className='bold'><Link to="/">VerdeVista</Link></li>
                 </ul>
                 <ul className='navRight'>
-                    <li className={`material-symbols-outlined ${menuIsClosed ? 'hide' : ''}`}>face</li>
-                    <li className={`material-symbols-outlined ${menuIsClosed ? 'hide' : ''}`}>shopping_cart</li>
-                    <li className={`cartCont ${menuIsClosed ? 'hide' : ''}`}>
+                    <li className={`${menuIsClosed ? 'hide' : ''}`}>
+                        <Link to ="/login">
+                            < NavUserProfile />
+                        </Link>
+                    </li>
+                    <li className={`${menuIsClosed ? 'hide' : ''}`}>
                         < NavCart />
                     </li>
                     <li className="material-symbols-outlined menuIcon" onClick={toggleMenu}>{menuIsClosed ? 'close' : 'menu'}</li>

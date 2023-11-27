@@ -3,8 +3,10 @@ import './NavCart.scss'
 const NavCart = () => {
     return (
         <>
-            <div className='material-symbols-outlined shoppingCart'>shopping_cart</div>
-            <div className='stickerPriceCart'>3</div>
+        <div className='cartCont'>
+            <span className='material-symbols-outlined shoppingCart'>shopping_cart</span>
+            <span className='stickerPriceCart'>3</span>
+        </div>
         </>
     )
 };

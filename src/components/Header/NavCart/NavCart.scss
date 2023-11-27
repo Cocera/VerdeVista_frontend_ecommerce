@@ -1,5 +1,9 @@
 @import '../../../colors.scss';
 
+.cartCont {
+    display: flex;
+}
+
 .shoppingCart {
     position: relative;
 }

@@ -27,7 +27,6 @@ nav {
 .navLeft {
     display: flex;
     justify-content: flex-start; 
-    align-items: flex-start;
 
     @media (max-width: 768px) {
         flex-direction: column; 
@@ -37,7 +36,6 @@ nav {
 .navRight {
     display: flex;
     justify-content: flex-end; 
-    align-items: end;
 }
 
 .navDropDown {
@@ -72,11 +70,5 @@ nav {
 
 }
 
-.cartCont {
-    display: flex;
-}
 
-.hide {
-    display: none;
-}
 

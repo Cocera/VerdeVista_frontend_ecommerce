@@ -41,18 +41,30 @@ nav {
 .navDropDown {
     display: none;
     height: 100vh;
+
+	transition: left 300ms linear;
 }
 
 .navDropDown.open {
 
     @media (max-width: 768px) {
+	    transition: left 300ms linear;
+
         width: 100%;
         order: 3; 
         display: flex;
         flex-flow: column;
         align-items: center;
         align-self: center;
-        
+
+        animation: appear 0.2s ease-in-out;        
+    }
+}
+
+.navDropDown.open > li {
+
+    @media (max-width: 768px) {
+        animation: appear 0.5s ease-in-out;        
     }
 }
 
@@ -67,7 +79,17 @@ nav {
         align-self: center;
         
     }
+}
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 

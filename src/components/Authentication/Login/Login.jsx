@@ -1,27 +1,33 @@
 import './Login.scss';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { UserContext } from '../../../context/UserContext/UserState';
 
 const Login = () => {
 
     const {login} = useContext(UserContext);
+    const emptyDataState = {email: "", password: ""};
+    const [data, setData] = useState(emptyDataState);
 
-    const onFinish = (userValues) => {
-        login(userValues)
+    const handleInputChange = (event) => {
+        setData({
+          ...data,
+          [event.target.name]: event.target.value,
+        });
     };
 
-    const onFinishFailed = (errorInfo) => {
-        console.log("Failed:", errorInfo);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        login(data);
+        setData(emptyDataState);
     };
 
     return (
         <>
-        <form on>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder='email' />
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder='password' />
-            <button>Send</button>
+        <form onSubmit={handleSubmit}>
+            <input type="email" id="email" name="email" placeholder='email' onChange={handleInputChange} value={data.email} />
+            <input type="password" id="password" name="password" placeholder='password' onChange={handleInputChange} value={data.password} />
+            <button type='submit'>Send</button>
         </form>
         </>
     );

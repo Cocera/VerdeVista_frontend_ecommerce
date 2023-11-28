@@ -17,8 +17,6 @@ export const UserProvider = ({children}) => {
 
     const [state, dispatch] = useReducer(UserReducer, initialState);
 
-    // METER LLAMADAS DE USER A LA API
-
     const login = async (userValues) => {
         try {
             const res = await axios.post(API_URL + '/login', userValues);
@@ -29,8 +27,7 @@ export const UserProvider = ({children}) => {
             if (res.data) {
                 localStorage.setItem('token', JSON.stringify(res.data.token));
                 localStorage.setItem('user', JSON.stringify(res.data.user));
-            }
-            console.log(res.data); // ELIMIAR DESPUES
+            };
         } catch (error) {
             console.error(error);
         };
@@ -47,4 +44,4 @@ export const UserProvider = ({children}) => {
           {children}
         </UserContext.Provider>
     );
-};    
+};   

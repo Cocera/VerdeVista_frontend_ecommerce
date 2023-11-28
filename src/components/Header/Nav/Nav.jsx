@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Nav.scss';
 import NavCart from '../NavCart/NavCart.jsx';
 import NavUserProfile from '../NavUserProfile/NavUserProfile.jsx';
-import SearchBar from '../SearchBar/SearchBar.jsx';
+import SearchBar from '../SearchNavBar/SearchBar.jsx';
 
 
 const Nav = () => {

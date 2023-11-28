@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import ProductReducer from  './ProductReducer.js';
+import ProductReducer from './ProductReducer.js';
 import axios from 'axios';
 
 const API_URL = "http://localhost:8080/products";
@@ -34,7 +34,7 @@ export const ProductProvider = ({children}) => {
             getProducts,
           }}
         >
-          {children}
+            {children}
         </ProductContext.Provider>
     );
 

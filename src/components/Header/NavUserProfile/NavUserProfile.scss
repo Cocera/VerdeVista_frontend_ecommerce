@@ -1,1 +1,50 @@
 @import '../../../colors.scss';
+
+.cont-nav-user {
+    position: relative;
+}
+
+.nav-user-dropdown {
+    position: absolute;
+    top: 2em; right: -2.6em;
+    padding: 0.5em;
+
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 63%, rgba(255,255,255,0) 100%);
+
+    animation: appear 0.2s ease-in-out; 
+
+    box-shadow: 0 0 5px 0px rgba(208, 208, 208, 0.2),
+    -2px 9px 15px 0px rgba(208, 208, 208, 0.2);
+
+    li {
+        display: flex;
+        padding: 0.4em;
+        animation: appear 0.3s ease-in-out; 
+
+        .material-symbols-outlined {
+            font-size:larger;
+        }
+    }
+}
+
+
+button {
+    background: none;
+    appearance: none;
+    border: none;
+}
+
+
+
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

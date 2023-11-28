@@ -33,12 +33,49 @@ export const UserProvider = ({children}) => {
         };
     };
 
+    const getUserInfo = async () => {
+        // SI NO HAY TOKEN, MENSAJE TIENES QUE INICIAR SESION
+        // PARA QUE SIRVE ESTA? LA ANTERIOR YA ME TRAE AL USUARIO
+        // HACER ENDPOINT PARA UTILIZAR ESTE
+        const token = JSON.parse(localStorage.getItem("token"));
+        const res = await axios.get(API_URL + "/info",
+          {headers: {
+              authorization: token,
+            },
+          });
+          dispatch({
+            type: "GET_USER_INFO",
+            payload: res.data,
+        })
+    };
+
+    const logout = async () => {
+        // NO ENTIENDO LA LOGICA
+        const token = JSON.parse(localStorage.getItem("token"));
+        const res = await axios.delete(API_URL + "/logout",  
+        {headers: {
+            authorization: token,
+          },
+        });
+
+        dispatch({
+          type: "LOGOUT",
+          payload: res.data,
+        });
+        if (res.data) {
+          localStorage.removeItem("token");
+          localStorage.removeItem("user");
+        }
+    };    
+    
     return (
         <UserContext.Provider
           value={{
             token: state.token,
             user: state.user,
             login,
+            getUserInfo,
+            logout
           }}
         >
           {children}

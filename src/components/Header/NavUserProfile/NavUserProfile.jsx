@@ -4,13 +4,19 @@
 import { useContext, useState } from 'react';
 import './NavUserProfile.scss';
 import { UserContext } from '../../../context/UserContext/UserState';
+import { Link } from 'react-router-dom';
 
 const NavUserProfile = () => {
 
     const [ menuIsOpen, setMenuOpen ] = useState(false);
-    const { token, user } = useContext(UserContext)
+    const { token, user, logout } = useContext(UserContext);
+
     const toggleMenu = () => {
         setMenuOpen(!menuIsOpen);
+    };
+
+    const logoutUser = () => {
+        logout();
     };
 
     if (token) {
@@ -29,9 +35,11 @@ const NavUserProfile = () => {
                     <span className="material-symbols-outlined">settings</span>
                     <span>Settings</span>
                 </li>
-                <li>
-                    <span className="material-symbols-outlined">logout</span>
-                    <span>Logout</span>
+                <li onClick={logoutUser}>
+                    <Link to='/'>
+                        <span className="material-symbols-outlined">logout</span>
+                        <span>Logout</span>
+                    </Link>
                 </li>
             </ul>
         </div>
@@ -40,11 +48,13 @@ const NavUserProfile = () => {
     } else if (!token) {
         return (
             <>
+            <Link to ="/login">
             <div className='cont-nav-user'>
                 <button onClick={toggleMenu}>
                     <div className='material-symbols-outlined'>account_circle</div>
                 </button>
             </div>
+            </Link>
             </>
         )
     }

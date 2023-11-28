@@ -1,12 +1,14 @@
 import './Login.scss';
 import { useContext, useState } from 'react';
 import { UserContext } from '../../../context/UserContext/UserState';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
-    const {login} = useContext(UserContext);
     const emptyDataState = {email: "", password: ""};
     const [data, setData] = useState(emptyDataState);
+    const {login} = useContext(UserContext);
+    const navigate = useNavigate();
 
     const handleInputChange = (event) => {
         setData({
@@ -19,6 +21,7 @@ const Login = () => {
         event.preventDefault();
 
         login(data);
+        navigate("/");
         setData(emptyDataState);
     };
 

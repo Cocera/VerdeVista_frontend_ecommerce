@@ -22,9 +22,7 @@ const Nav = () => {
                 </ul>
                 <ul className='navRight'>
                     <li className={`${menuIsClosed ? 'hide' : ''}`}>
-                        <Link to ="/login">
-                            < NavUserProfile />
-                        </Link>
+                        < NavUserProfile />
                     </li>
                     <li className={`${menuIsClosed ? 'hide' : ''}`}>
                         < NavCart />

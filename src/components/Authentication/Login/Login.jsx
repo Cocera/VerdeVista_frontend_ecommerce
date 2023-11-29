@@ -5,15 +5,15 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
-    const emptyDataState = {email: "", password: ""};
+    const emptyDataState = { email: "", password: "" };
     const [data, setData] = useState(emptyDataState);
-    const {login} = useContext(UserContext);
+    const { login } = useContext(UserContext);
     const navigate = useNavigate();
 
     const handleInputChange = (event) => {
         setData({
-          ...data,
-          [event.target.name]: event.target.value,
+            ...data,
+            [event.target.name]: event.target.value,
         });
     };
 
@@ -27,13 +27,15 @@ const Login = () => {
 
     return (
         <>
-        <main>
-            <form className='login-signup-form' onSubmit={handleSubmit}>
-                <input type="email" id="email" name="email" placeholder='email' onChange={handleInputChange} value={data.email} />
-                <input type="password" id="password" name="password" placeholder='password' onChange={handleInputChange} value={data.password} />
-                <button type='submit'>Send</button>
-            </form>
-        </main>
+            <main>
+                <form className='login-signup-form' onSubmit={handleSubmit}>
+                    <h4>Te echabamos de menos</h4>
+                    <input type="email" id="email" name="email" placeholder='email' onChange={handleInputChange} value={data.email} />
+                    <input type="password" id="password" name="password" placeholder='password' onChange={handleInputChange} value={data.password} />
+                    <button type='submit'>Send</button>
+                    <p>¿Aun no formas parte de nuestra comunidad? Regístrate</p>
+                </form>
+            </main>
         </>
     );
 };

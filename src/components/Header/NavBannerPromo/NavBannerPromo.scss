@@ -1,7 +1,7 @@
 @import '../../../colors.scss';
 
-#rssBlock{
-  left:0px;
+#rssBlock {
+  left: 0px;
   height: auto;
   background: $main-color;
   overflow: hidden;
@@ -9,22 +9,33 @@
 }
 
 .cnnContents {
-  width:100%;
+  width: 100%;
   padding: 0.5em 0em;
   font-size: larger;
   white-space: nowrap;
   text-transform: uppercase;
   font-weight: 300;
+
   span {
-    display:inline-block;
+    display: inline-block;
     animation: scrolling-left 10s linear infinite;
   }
+
   .marqueeStyle2 {
     animation-delay: 2s;
   }
 }
 
 @keyframes scrolling-left {
-    0% {transform: translateX(100vw)};
-      100% {transform: translateX(-100vw)};
+  0% {
+    transform: translateX(100vw)
+  }
+
+  ;
+
+  100% {
+    transform: translateX(-100vw)
+  }
+
+  ;
 }

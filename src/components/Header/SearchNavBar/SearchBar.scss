@@ -2,17 +2,20 @@
 
 .searchBarNav {
     position: relative;
+
     button {
         position: absolute;
-        top: 0.45rem; right: 0.60rem;
+        top: 0.45rem;
+        right: 0.60rem;
         background: none;
         appearance: none;
         border: none;
-    };
+    }
+
     input {
         padding: 0.7em 1.2em;
         border-radius: 5em;
         min-width: 20em;
 
     }
-};
+}

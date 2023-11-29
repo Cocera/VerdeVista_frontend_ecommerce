@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const NavUserProfile = () => {
 
-    const [ menuIsOpen, setMenuOpen ] = useState(false);
+    const [menuIsOpen, setMenuOpen] = useState(false);
     const { token, user, logout } = useContext(UserContext);
 
     const toggleMenu = () => {
@@ -21,40 +21,40 @@ const NavUserProfile = () => {
 
     if (token) {
         return (
-        <>
-        <div className='cont-nav-user'>
-            <button onClick={toggleMenu} className='profile-thumbnail-img'>
-                <img src={user?.img} alt="user-thumbnail" />
-            </button>
-            <ul className={`${menuIsOpen ? '' : 'hide'} nav-user-dropdown`}>
-                <li>
-                    <span className="material-symbols-outlined">person</span>
-                    <span>Profile</span>
-                </li>
-                <li>
-                    <span className="material-symbols-outlined">settings</span>
-                    <span>Settings</span>
-                </li>
-                <li onClick={logoutUser}>
-                    <Link to='/'>
-                        <span className="material-symbols-outlined">logout</span>
-                        <span>Logout</span>
-                    </Link>
-                </li>
-            </ul>
-        </div>
-        </>
+            <>
+                <div className='cont-nav-user'>
+                    <button onClick={toggleMenu} className='profile-thumbnail-img'>
+                        <img src={user?.img} alt="user-thumbnail" />
+                    </button>
+                    <ul className={`${menuIsOpen ? '' : 'hide'} nav-user-dropdown`}>
+                        <li>
+                            <span className="material-symbols-outlined">person</span>
+                            <span>Profile</span>
+                        </li>
+                        <li>
+                            <span className="material-symbols-outlined">settings</span>
+                            <span>Settings</span>
+                        </li>
+                        <li onClick={logoutUser}>
+                            <Link to='/'>
+                                <span className="material-symbols-outlined">logout</span>
+                                <span>Logout</span>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </>
         )
     } else if (!token) {
         return (
             <>
-            <Link to ="/login">
-            <div className='cont-nav-user'>
-                <button onClick={toggleMenu}>
-                    <div className='material-symbols-outlined'>account_circle</div>
-                </button>
-            </div>
-            </Link>
+                <Link to="/login">
+                    <div className='cont-nav-user'>
+                        <button onClick={toggleMenu}>
+                            <div className='material-symbols-outlined'>account_circle</div>
+                        </button>
+                    </div>
+                </Link>
             </>
         )
     }

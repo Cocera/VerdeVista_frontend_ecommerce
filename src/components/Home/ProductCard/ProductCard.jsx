@@ -1,9 +1,9 @@
 import './ProductCard.scss';
 
 const ProductCard = (product) => {
-    return(
+    return (
         <>
-            <article key={product.id} className='card'>
+            <article key={product.id} className='cardHome'>
                 <div className='cardImgCont'>
                     <img className='first_img' src={product.img} />
                     <img src={product.second_img} />

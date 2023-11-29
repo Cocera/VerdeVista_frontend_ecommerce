@@ -1,0 +1,36 @@
+@import '../../../colors.scss';
+
+#rssBlock{
+  left:0px;
+  height: 80px;
+  background: $color_4;
+//   position: absolute;
+//   width: 100vw;
+  overflow: hidden;
+}
+
+.cnnContents {
+  width:100%;
+  padding-top: 20px;
+  margin:0 auto;
+  font-size: 30px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: 'Museo';
+  font-weight: 300;
+}
+
+.marqueeStyle {
+  display:inline-block;
+  animation: scrolling-left 10s linear infinite;
+}
+.marqueeStyle2 {
+  display:inline-block;
+  animation: scrolling-left 10s linear infinite;
+  animation-delay: 2s;
+}
+
+@keyframes scrolling-left {
+    0% {transform: translateX(100vw)};
+      100% {transform: translateX(-100vw)};
+}

@@ -4,7 +4,7 @@ import './Nav.scss';
 import NavCart from '../NavCart/NavCart.jsx';
 import NavUserProfile from '../NavUserProfile/NavUserProfile.jsx';
 import SearchBar from '../SearchNavBar/SearchBar.jsx';
-
+import img from"../../../assets/logo_verdeVista.png"
 
 const Nav = () => {
 
@@ -17,9 +17,13 @@ const Nav = () => {
     return (
         <>
             <nav>
+                <Link to="/">
                 <ul className='navLeft'> 
-                    <li className='bold'><Link to="/">VerdeVista</Link></li>
+                    <li> 
+                        <img src={img}/>
+                    </li>
                 </ul>
+                </Link>
                 <ul className='navRight'>
                     <li className={`${menuIsClosed ? 'hide' : ''}`}>
                         < NavUserProfile />

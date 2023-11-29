@@ -7,7 +7,7 @@ const Header = () => {
         <>
             <header>
                 < Nav />
-                <NavBannerPromo title="BLACK FRIDAY 50%" />
+                < NavBannerPromo title="BLACK FRIDAY 50%" />
             </header>
         </>
     );

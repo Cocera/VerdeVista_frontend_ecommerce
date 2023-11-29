@@ -1,11 +1,11 @@
 @import '../../../colors.scss';
 
-.login-signup-main {
+.login-main {
     display: flex;
     justify-content: center;
 }
 
-.login-signup-form {
+.login-form {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -30,4 +30,14 @@
         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.04),
             0px 5px 10px 2px rgba(0, 0, 0, 0.08);
     }
+}
+
+.toRegister {
+    color: $main-color;
+    text-decoration: underline;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.toRegister:hover {
+    color: $dark-main-color;
 }

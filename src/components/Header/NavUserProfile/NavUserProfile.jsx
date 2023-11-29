@@ -60,33 +60,4 @@ const NavUserProfile = () => {
     }
 };
 
-
-//     return (
-//         <>  
-//         <div className='cont-nav-user'>
-//             <button onClick={toggleMenu}>
-//                 <div className={`${token ? 'hide' : ''} material-symbols-outlined`}>account_circle</div>
-//             </button>
-//             <button onClick={toggleMenu} className={`${token ? '' : 'hide'} profile-thumbnail-img`}>
-//                 <img src={token ? user?.img : 'hide'} alt="user-thumbnail" />
-//             </button>
-//             <ul className={`${menuIsOpen && token? '' : 'hide'} nav-user-dropdown`}>
-//                 <li>
-//                     <span className="material-symbols-outlined">person</span>
-//                     <span>Profile</span>
-//                 </li>
-//                 <li>
-//                     <span className="material-symbols-outlined">settings</span>
-//                     <span>Settings</span>
-//                 </li>
-//                 <li>
-//                     <span className="material-symbols-outlined">logout</span>
-//                     <span>Logout</span>
-//                 </li>
-//             </ul>
-//         </div>
-//         </>
-//     );
-// };
-
 export default NavUserProfile;

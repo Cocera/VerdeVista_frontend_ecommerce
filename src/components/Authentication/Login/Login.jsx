@@ -1,7 +1,7 @@
 import './Login.scss';
 import { useContext, useState } from 'react';
 import { UserContext } from '../../../context/UserContext/UserState';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
 
@@ -27,13 +27,13 @@ const Login = () => {
 
     return (
         <>
-            <main className='login-signup-main'>
-                <form className='login-signup-form' onSubmit={handleSubmit}>
+            <main className='login-main'>
+                <form className='login-form' onSubmit={handleSubmit}>
                     <h4>¡Te echabamos de menos!</h4>
                     <input type="email" id="email" name="email" placeholder='email' onChange={handleInputChange} value={data.email} />
-                    <input type="password" id="password" name="password" placeholder='password' onChange={handleInputChange} value={data.password} />
-                    <button type='submit'>Send</button>
-                    <p>¿Aun no formas parte de nuestra comunidad? Regístrate</p>
+                    <input type="password" id="password" name="password" placeholder='contraseña' onChange={handleInputChange} value={data.password} />
+                    <button type='submit'>Conectar</button>
+                    <p>¿Aun no formas parte de nuestra comunidad? <Link to='/signup'><span className='toRegister'>Regístrate</span></Link></p>
                 </form>
             </main>
         </>

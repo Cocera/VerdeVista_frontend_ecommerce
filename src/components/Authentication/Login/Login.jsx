@@ -27,9 +27,9 @@ const Login = () => {
 
     return (
         <>
-            <main>
+            <main className='login-signup-main'>
                 <form className='login-signup-form' onSubmit={handleSubmit}>
-                    <h4>Te echabamos de menos</h4>
+                    <h4>¡Te echabamos de menos!</h4>
                     <input type="email" id="email" name="email" placeholder='email' onChange={handleInputChange} value={data.email} />
                     <input type="password" id="password" name="password" placeholder='password' onChange={handleInputChange} value={data.password} />
                     <button type='submit'>Send</button>

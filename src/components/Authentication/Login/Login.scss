@@ -1,11 +1,17 @@
 @import '../../../colors.scss';
 
+.login-signup-main {
+    display: flex;
+    justify-content: center;
+}
+
 .login-signup-form {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    // max-width: 40em;
+    max-width: 20em;
     padding: 5em;
+    text-align: center;
 
     input {
         border-radius: 0.7em;

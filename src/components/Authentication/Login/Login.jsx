@@ -27,11 +27,13 @@ const Login = () => {
 
     return (
         <>
-        <form onSubmit={handleSubmit}>
-            <input type="email" id="email" name="email" placeholder='email' onChange={handleInputChange} value={data.email} />
-            <input type="password" id="password" name="password" placeholder='password' onChange={handleInputChange} value={data.password} />
-            <button type='submit'>Send</button>
-        </form>
+        <main>
+            <form className='login-signup-form' onSubmit={handleSubmit}>
+                <input type="email" id="email" name="email" placeholder='email' onChange={handleInputChange} value={data.email} />
+                <input type="password" id="password" name="password" placeholder='password' onChange={handleInputChange} value={data.password} />
+                <button type='submit'>Send</button>
+            </form>
+        </main>
         </>
     );
 };

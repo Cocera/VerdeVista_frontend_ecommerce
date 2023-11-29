@@ -1,1 +1,6 @@
 @import '../../../colors.scss';
+
+.login-signup-form {
+    display: flex;
+    flex-direction: column;
+}

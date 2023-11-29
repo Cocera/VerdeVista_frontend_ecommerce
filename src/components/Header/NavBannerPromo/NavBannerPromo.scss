@@ -2,7 +2,7 @@
 
 #rssBlock{
   left:0px;
-  height: 80px;
+  height: auto;
   background: $main-color;
   overflow: hidden;
   z-index: 1;
@@ -10,23 +10,18 @@
 
 .cnnContents {
   width:100%;
-  padding-top: 20px;
-  margin:0 auto;
-  font-size: 30px;
+  padding: 0.5em 0em;
+  font-size: larger;
   white-space: nowrap;
   text-transform: uppercase;
-  font-family: 'Museo';
   font-weight: 300;
-}
-
-.marqueeStyle {
-  display:inline-block;
-  animation: scrolling-left 10s linear infinite;
-}
-.marqueeStyle2 {
-  display:inline-block;
-  animation: scrolling-left 10s linear infinite;
-  animation-delay: 2s;
+  span {
+    display:inline-block;
+    animation: scrolling-left 10s linear infinite;
+  }
+  .marqueeStyle2 {
+    animation-delay: 2s;
+  }
 }
 
 @keyframes scrolling-left {

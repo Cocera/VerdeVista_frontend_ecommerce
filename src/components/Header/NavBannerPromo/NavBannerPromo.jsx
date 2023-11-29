@@ -8,8 +8,8 @@ const NavBannerPromo = (props) => {
         <>
         <div id='rssBlock'>
             <p className="cnnContents">
-                <span className="marqueeStyle">{props.title}</span>
-                <span className="marqueeStyle2">{props.title}</span>
+                <span className="marqueeStyle">{props.title} &#128561;</span>
+                <span className="marqueeStyle2">{props.title} &#128561;</span>
             </p>
         </div>
         </>

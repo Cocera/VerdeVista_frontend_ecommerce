@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import './fonts.scss';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ProductProvider } from './context/ProductContext/ProductState.jsx';

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './Nav.scss';
 import NavCart from '../NavCart/NavCart.jsx';
 import NavUserProfile from '../NavUserProfile/NavUserProfile.jsx';
@@ -37,7 +37,11 @@ const Nav = () => {
                     <li>
                         < SearchBar />
                     </li>
-                    <li>Link</li>
+                    <li>
+                        <Link to="/products">
+                            Nuestras plantas
+                        </Link>
+                    </li>
                     <li>Link</li>
                     <li>Link</li>
                     <li>Link</li>

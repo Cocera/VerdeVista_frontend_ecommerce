@@ -7,7 +7,7 @@ const API_URL = "http://localhost:8080/users";
 const token = JSON.parse(localStorage.getItem("token"));
 
 const initialState = {
-  token: token ? token : null,
+  token: token || null,
   user: null,
 };
 
@@ -37,6 +37,7 @@ export const UserProvider = ({ children }) => {
     // SI NO HAY TOKEN, MENSAJE TIENES QUE INICIAR SESION
     // PARA QUE SIRVE ESTA? LA ANTERIOR YA ME TRAE AL USUARIO
     // HACER ENDPOINT PARA UTILIZAR ESTE
+
     const token = JSON.parse(localStorage.getItem("token"));
     const res = await axios.get(API_URL + "/info",
       {
@@ -52,6 +53,7 @@ export const UserProvider = ({ children }) => {
 
   const logout = async () => {
     // NO ENTIENDO LA LOGICA
+
     const token = JSON.parse(localStorage.getItem("token"));
     const res = await axios.delete(API_URL + "/logout",
       {
@@ -69,7 +71,9 @@ export const UserProvider = ({ children }) => {
       localStorage.removeItem("user");
     }
   };
+
   // EL SIGNUP TIENE QUE GENERAR UN TOKEN YA Y GUARDARLO
+
   const signup = async (newUserValues) => {
     const res = await axios.post(API_URL, newUserValues);
     dispatch({
@@ -77,7 +81,7 @@ export const UserProvider = ({ children }) => {
       payload: res.data
     })
     if (res.data) {
-      localStorage.setItem('token', JSON.stringify(res.data.token));
+      // localStorage.setItem('token', JSON.stringify(res.data.token));
       localStorage.setItem('user', JSON.stringify(res.data.user));
     };
   };

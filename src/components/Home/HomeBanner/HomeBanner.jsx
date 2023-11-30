@@ -1,4 +1,5 @@
 import './HomeBanner.scss';
+import video from "../../../assets/BannerMonstera.mp4"
 
 const HomeBanner = () => {
     return (
@@ -10,7 +11,10 @@ const HomeBanner = () => {
                         <h3>Descubre nuestras ofertas verdes</h3>
                     </div>
                 </div>
-                <img src="https://images.pexels.com/photos/1055408/pexels-photo-1055408.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                <video id="videoFondo" autoPlay muted loop>
+                    <source src={video} type="video/mp4" />
+                    Tu navegador no soporta el elemento de video.
+                </video>
             </div>
         </>
     );

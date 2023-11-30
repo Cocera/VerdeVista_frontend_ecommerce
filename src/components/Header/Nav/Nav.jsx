@@ -4,7 +4,7 @@ import './Nav.scss';
 import NavCart from '../NavCart/NavCart.jsx';
 import NavUserProfile from '../NavUserProfile/NavUserProfile.jsx';
 import SearchBar from '../SearchNavBar/SearchBar.jsx';
-import img from "../../../assets/logo_verdeVista.png"
+import logo from "../../../assets/logo_verdeVista.png"
 import { ProductContext } from '../../../context/ProductContext/ProductState.jsx';
 
 const Nav = () => {
@@ -13,7 +13,7 @@ const Nav = () => {
 
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart))
-    },[cart]);
+    }, [cart]);
 
     const [menuIsClosed, setMenuOpen] = useState(false);
 
@@ -27,8 +27,16 @@ const Nav = () => {
                 <Link to="/">
                     <ul className='navLeft'>
                         <li>
-                            <img src={img} />
+                            <img src={logo} />
                         </li>
+                        <li className='only-desktop'>
+                            <Link to="/products">
+                                Nuestros productos
+                            </Link>
+                        </li>
+                        <li className='only-desktop'>¿Quienes somos?</li>
+                        <li className='only-desktop'>Contacto</li>
+
                     </ul>
                 </Link>
                 <ul className='navRight'>
@@ -37,7 +45,7 @@ const Nav = () => {
                     </li>
                     <li className={`${menuIsClosed ? 'hide' : ''}`}>
                         < Link to="/cart">
-                            < NavCart counter={cart.length}/>
+                            < NavCart counter={cart.length} />
                         </Link>
                     </li>
                     <li className="material-symbols-outlined menuIcon" onClick={toggleMenu}>{menuIsClosed ? 'close' : 'menu'}</li>
@@ -48,12 +56,12 @@ const Nav = () => {
                     </li>
                     <li>
                         <Link to="/products">
-                            Nuestras plantas
+                            Nuestros productos
                         </Link>
                     </li>
-                    <li>Link</li>
-                    <li>Link</li>
-                    <li>Link</li>
+                    <li>¿Quienes somos?</li>
+                    <li>Suscripción anual</li>
+                    <li>¿Necesitas ayuda?</li>
                 </ul>
             </nav>
         </>

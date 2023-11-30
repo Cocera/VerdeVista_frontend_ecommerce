@@ -30,10 +30,18 @@ nav {
 .navLeft {
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
 
     img {
         height: 35px;
         width: 100%;
+    }
+
+    .only-desktop {
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 
     @media (max-width: 768px) {

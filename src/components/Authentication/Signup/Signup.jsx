@@ -20,7 +20,7 @@ const Signup = () => {
         event.preventDefault();
 
         signup(data);
-        navigate("/login");
+        navigate("/");
         setData(emptyDataState);
     };
 

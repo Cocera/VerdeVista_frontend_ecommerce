@@ -19,12 +19,16 @@ const NavUserProfile = () => {
         logout();
     };
 
+    const defaultImg = 'https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+    const userImg = user?.img
+
     if (token) {
         return (
             <>
                 <div className='cont-nav-user'>
                     <button onClick={toggleMenu} className='profile-thumbnail-img'>
-                        <img src={user?.img} alt="user-thumbnail" />
+                        {/* <img src={user?.img} alt="user-thumbnail" /> */}
+                        <img src={userImg == null ? defaultImg : user.img} alt="user-thumbnail" />
                     </button>
                     <ul className={`${menuIsOpen ? '' : 'hide'} nav-user-dropdown`}>
                         <li>

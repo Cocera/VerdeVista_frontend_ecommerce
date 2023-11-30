@@ -5,10 +5,11 @@ import axios from 'axios';
 const API_URL = "http://localhost:8080/users";
 
 const token = JSON.parse(localStorage.getItem("token"));
+const user = JSON.parse(localStorage.getItem("user"));
 
 const initialState = {
   token: token || null,
-  user: null,
+  user: user || null,
 };
 
 export const UserContext = createContext(initialState);
@@ -72,7 +73,7 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  // EL SIGNUP TIENE QUE GENERAR UN TOKEN YA Y GUARDARLO
+  // EL SIGNUP TIENE QUE GENERAR UN TOKEN YA Y GUARDARLO, HACER LOGIN PARA SACAR TOKEN
 
   const signup = async (newUserValues) => {
     const res = await axios.post(API_URL, newUserValues);

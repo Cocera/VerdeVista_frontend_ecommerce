@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <>
             < HomeBanner />
-            < ProductCollection collectionTitle="Most popular plants" />
+            < ProductCollection collectionTitle="Nuestros productos más populares &#127793;" />
         </>
     );
 };

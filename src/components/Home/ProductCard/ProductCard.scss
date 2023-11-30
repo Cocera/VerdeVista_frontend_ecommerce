@@ -6,6 +6,10 @@ article.cardHome {
     padding-bottom: 2em;
     position: relative;
 
+    @media (min-width: 768px) {
+        padding-bottom: 0em;
+    }
+
     div.cardImgCont {
         border-radius: 5px;
         width: 100%;

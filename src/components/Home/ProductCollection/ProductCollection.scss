@@ -1,9 +1,24 @@
 @import '../../../colors.scss';
 
-.ProductSection {
+.product-section {
     padding: 3em 2em;
 
     h2 {
         text-align: center;
+        margin-bottom: 1em;
+    }
+}
+.product-section-cards {
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1em;
+        justify-content: center;
+    }
+    article {
+        @media (min-width: 768px) {
+            width: 40%;
+        }
     }
 }

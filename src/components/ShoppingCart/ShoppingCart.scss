@@ -1,0 +1,16 @@
+@import '../../colors.scss';
+
+.cart-main {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+
+.cart-feed {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    gap: 1em;
+    padding: 2em;
+}

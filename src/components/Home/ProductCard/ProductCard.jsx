@@ -1,6 +1,11 @@
 import './ProductCard.scss';
+import { useContext } from 'react';
+import { ProductContext } from '../../../context/ProductContext/ProductState';
 
 const ProductCard = (product) => {
+
+    const { addCart } = useContext(ProductContext);
+
     return (
         <>
             <article key={product.id} className={product.cardClassName}>
@@ -9,7 +14,7 @@ const ProductCard = (product) => {
                         <span>{product.price}€</span>
                         <span>{product.category}</span>
                     </div>
-                    <div className='material-symbols-outlined product-add-cart'>add_shopping_cart</div>
+                    <div onClick={() => addCart(product)} className='material-symbols-outlined product-add-cart'>add_shopping_cart</div>
                     <img className='first_img' src={product.img} />
                     <img src={product.second_img} />
                 </div>

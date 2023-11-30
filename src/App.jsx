@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer.jsx';
 import Login from './components/Authentication/Login/Login.jsx';
 import Signup from './components/Authentication/Signup/Signup.jsx';
 import ProductsFeed from './components/Home/ProductsFeed/ProductsFeed.jsx';
+import ShoppingCart from './components/ShoppingCart/ShoppingCart.jsx';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           < Route path="/login" element={<Login />} />
           < Route path="/signup" element={<Signup />} />
           < Route path="/products" element={<ProductsFeed />} />
+          < Route path="/cart" element={<ShoppingCart />} />
         </Routes>
         {/* < Footer /> */}
       </ BrowserRouter>

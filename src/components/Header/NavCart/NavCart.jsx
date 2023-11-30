@@ -1,6 +1,15 @@
+import { useContext, useEffect } from 'react';
 import './NavCart.scss'
+import { ProductContext } from '../../../context/ProductContext/ProductState';
 
 const NavCart = () => {
+
+    const { cart } = useContext(ProductContext);
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart))
+    },[cart]);
+
     return (
         <>
             <div className='cartCont'>

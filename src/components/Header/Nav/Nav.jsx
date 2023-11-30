@@ -29,7 +29,9 @@ const Nav = () => {
                         < NavUserProfile />
                     </li>
                     <li className={`${menuIsClosed ? 'hide' : ''}`}>
-                        < NavCart />
+                        < Link to="/cart">
+                            < NavCart />
+                        </Link>
                     </li>
                     <li className="material-symbols-outlined menuIcon" onClick={toggleMenu}>{menuIsClosed ? 'close' : 'menu'}</li>
                 </ul>

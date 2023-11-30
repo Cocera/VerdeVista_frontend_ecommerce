@@ -11,8 +11,11 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: flex-start;
-
-
     gap: 3em;
     padding: 3em;
+
+    @media (max-width: 650px) {
+        flex-flow: column nowrap;
+        align-items: center;
+    }
 }

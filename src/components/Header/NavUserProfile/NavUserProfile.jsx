@@ -27,7 +27,6 @@ const NavUserProfile = () => {
             <>
                 <div className='cont-nav-user'>
                     <button onClick={toggleMenu} className='profile-thumbnail-img'>
-                        {/* <img src={user?.img} alt="user-thumbnail" /> */}
                         <img src={userImg == null ? defaultImg : user.img} alt="user-thumbnail" />
                     </button>
                     <ul className={`${menuIsOpen ? '' : 'hide'} nav-user-dropdown`}>

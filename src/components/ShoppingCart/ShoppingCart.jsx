@@ -5,25 +5,37 @@ import { ProductContext } from '../../context/ProductContext/ProductState';
 
 const ShoppingCart = () => {
     const { cart } = useContext(ProductContext);
-    const data = cart.map(product => product.name)
-    return (
-        <>
-            <main className='cart-main'>
-            <h2 className='txt-center'>Aquí tienes tu pedido</h2>
-            <p className='txt-center'>Si no te das prisa, puede que se agote :O</p>
-            <section className='cart-feed '>
-                {cart.map((product) => {
-                    return < ProductCardCart 
-                    name={product.name}
-                    price={product.price}
-                    img={product.img}
-                    id={product.id}
-                    />
-                })}
-                </section>
-            </main>
-        </>
-    );
+    const cartCheck = JSON.parse(localStorage.getItem('cart'));
+
+    if (cartCheck.length == 0) {
+        return (
+            <>
+                <main className='cart-main'>
+                    <h1 className='txt-center main-color'>¡Oh no!</h1>
+                    <h1 className='txt-center'>Aun no le has echado el ojo a nada &#127797;&#128064;</h1>
+                </main>
+            </>
+        );
+    } else {
+        return (
+            <>
+                <main className='cart-main'>
+                    <h2 className='txt-center'>Aquí tienes tu pedido</h2>
+                    <p className='txt-center'>Si no te das prisa, puede que se agote :O</p>
+                    <section className='cart-feed '>
+                        {cart.map((product) => {
+                            return < ProductCardCart
+                                name={product.name}
+                                price={product.price}
+                                img={product.img}
+                                id={product.id}
+                            />
+                        })}
+                    </section>
+                </main>
+            </>
+        );
+    };
 };
 
 export default ShoppingCart;

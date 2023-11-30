@@ -1,12 +1,19 @@
-import { useState } from 'react';
-import { Link, NavLink } from "react-router-dom";
+import { useContext, useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import './Nav.scss';
 import NavCart from '../NavCart/NavCart.jsx';
 import NavUserProfile from '../NavUserProfile/NavUserProfile.jsx';
 import SearchBar from '../SearchNavBar/SearchBar.jsx';
 import img from "../../../assets/logo_verdeVista.png"
+import { ProductContext } from '../../../context/ProductContext/ProductState.jsx';
 
 const Nav = () => {
+
+    const { cart } = useContext(ProductContext);
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart))
+    },[cart]);
 
     const [menuIsClosed, setMenuOpen] = useState(false);
 
@@ -30,7 +37,7 @@ const Nav = () => {
                     </li>
                     <li className={`${menuIsClosed ? 'hide' : ''}`}>
                         < Link to="/cart">
-                            < NavCart />
+                            < NavCart counter={cart.length}/>
                         </Link>
                     </li>
                     <li className="material-symbols-outlined menuIcon" onClick={toggleMenu}>{menuIsClosed ? 'close' : 'menu'}</li>

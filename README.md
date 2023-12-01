@@ -54,7 +54,7 @@ Ensure you have Node.js installed in your development environment.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/cescalberola/ScooterRent_frontend_project.git
+   git clone https://github.com/Cocera/VerdeVista_frontend_ecommerce.git
    ```
 2. Install NPM packages
    ```sh

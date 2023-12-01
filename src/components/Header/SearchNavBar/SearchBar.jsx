@@ -1,6 +1,3 @@
-// El valor de 'value' se va a autocompletar con lo que el usuario escriba
-// NO ME DEJA ESCRIBIR EL INPUT DE SEARCH
-
 import './SearchBar.scss';
 
 const SearchBar = () => {

@@ -1,8 +1,5 @@
 import './NavBannerPromo.scss';
 
-// HAY UNO QUE AL HACER RECARGA SE QUEDA PARADO
-// REVISAR TIEMPOS
-
 const NavBannerPromo = (props) => {
     return (
         <>

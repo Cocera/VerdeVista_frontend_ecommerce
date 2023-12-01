@@ -1,6 +1,3 @@
-// NO FUNCIONA BIEN LA IMG DEL USER
-// la 'ul' es el menu que aparecera al hacer hover sobre el icon de menu en desktop
-
 import { useContext, useState } from 'react';
 import './NavUserProfile.scss';
 import { UserContext } from '../../../context/UserContext/UserState';

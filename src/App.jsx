@@ -26,7 +26,7 @@ function App() {
           < Route path="/products" element={<ProductsFeed />} />
           < Route path="/cart" element={<ShoppingCart />} />
         </Routes>
-        {/* < Footer /> */}
+        < Footer />
       </ BrowserRouter>
     </ProductProvider>
     </UserProvider>

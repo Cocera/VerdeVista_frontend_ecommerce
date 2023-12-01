@@ -18,7 +18,10 @@
 
   span {
     display: inline-block;
-    animation: scrolling-left 10s linear infinite;
+    animation: scrolling-left 20s linear infinite;
+    @media (max-width: 768px) {
+      animation: scrolling-left 10s linear infinite;
+    }
   }
 
   .marqueeStyle2 {

@@ -37,6 +37,9 @@ The role of styling applied with SASS has given me the opportunity to combine kn
 ### CSS with superpowers
 Application of SASS with its ease of creating application-wide style variables. 
 
+### Responsive
+Take the application's responsive and mobile-first approach as a starting point when creating all components.
+
 </ul>
 
 ## Getting Started

@@ -32,7 +32,7 @@ const ShoppingCart = () => {
                             />
                         })}
                     </section>
-                    <section>
+                    <section className='cart-buttons'>
                         <button onClick={clearCart}>Borrar carrito</button>
                         <button>Realizar pedido</button>
                     </section>

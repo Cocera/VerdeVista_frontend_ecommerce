@@ -15,7 +15,11 @@
     padding: 2em;
 }
 
-section {
+section.cart-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.6em;
+
     button {
         background-color: $main-color;
         padding: 0.5em 1em;
@@ -25,3 +29,4 @@ section {
             0px 5px 10px 2px rgba(0, 0, 0, 0.08);
     }
 }
+

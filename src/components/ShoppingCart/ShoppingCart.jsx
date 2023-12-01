@@ -4,7 +4,7 @@ import './ShoppingCart.scss';
 import { ProductContext } from '../../context/ProductContext/ProductState';
 
 const ShoppingCart = () => {
-    const { cart } = useContext(ProductContext);
+    const { cart, clearCart } = useContext(ProductContext);
     const cartCheck = JSON.parse(localStorage.getItem('cart'));
 
     if (cartCheck.length == 0) {
@@ -31,6 +31,10 @@ const ShoppingCart = () => {
                                 id={product.id}
                             />
                         })}
+                    </section>
+                    <section>
+                        <button onClick={clearCart}>Borrar carrito</button>
+                        <button>Realizar pedido</button>
                     </section>
                 </main>
             </>

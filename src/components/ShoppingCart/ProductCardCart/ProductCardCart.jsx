@@ -1,10 +1,11 @@
 import './ProductCardCart.scss'
 
 const ProductCardCart = (product) => {
+
     return (
         <>
             <article key={product.id} className='cart-product-card'>
-                <div className='material-symbols-outlined remove-cart'>remove_shopping_cart</div>
+                <div className='material-symbols-outlined remove-cart'>delete</div>
                 <div className='cart-img'>
                     <img src={product.img} />
                 </div>

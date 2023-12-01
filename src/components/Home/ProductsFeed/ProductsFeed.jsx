@@ -11,18 +11,19 @@ const ProductsFeed = () => {
     return (
         <>
             <main className='products-main'>
-                <h1>Productos</h1>
+                <h1 className='txt-center'>Bueno, bonito y barato</h1>
+                <p className='txt-center'>¡Bienvenido a tu nuevo paraíso botánico!</p>
                 <section className='products-feed'>
                     {products.map((product) => {
-                        return <ProductCard cardClassName="cardProductFeed" 
-                        name={product.name} 
-                        description={product.description} 
-                        img={product.img} 
-                        second_img={product.second_img} 
-                        id={product.id} 
-                        category={product.Category.name} 
-                        price={product.price} />
-                    })}            
+                        return <ProductCard cardClassName="cardProductFeed"
+                            name={product.name}
+                            description={product.description}
+                            img={product.img}
+                            second_img={product.second_img}
+                            id={product.id}
+                            category={product.Category.name}
+                            price={product.price} />
+                    })}
                 </section>
             </main>
         </>

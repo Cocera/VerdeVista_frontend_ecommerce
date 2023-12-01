@@ -2,8 +2,22 @@
 
 .products-main {
     display: flex;
-    // justify-content: center;
     flex-direction: column;
+    padding: 3em 0em;
+
+    h1 {
+
+        @media (max-width: 650px) {
+            font-size: xx-large;
+        }
+    }
+
+    p {
+
+        @media (max-width: 650px) {
+            font-size: medium;
+        }
+    }
 }
 
 .products-feed {

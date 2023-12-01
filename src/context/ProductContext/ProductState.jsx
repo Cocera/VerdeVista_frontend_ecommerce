@@ -13,7 +13,7 @@ const initialState = {
 
 export const ProductContext = createContext(initialState);
 
-export const ProductProvider = ({children}) => {
+export const ProductProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(ProductReducer, initialState);
 
@@ -36,15 +36,22 @@ export const ProductProvider = ({children}) => {
         })
     };
 
+    const clearCart = () => {
+        dispatch({
+            type: 'CLEAR_CART',
+        })
+    };
+
     return (
         <ProductContext.Provider
-          value={{
-            products: state.products,
-            cart: state.cart,
+            value={{
+                products: state.products,
+                cart: state.cart,
 
-            getProducts,
-            addCart
-          }}
+                getProducts,
+                addCart,
+                clearCart
+            }}
         >
             {children}
         </ProductContext.Provider>

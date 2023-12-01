@@ -3,46 +3,33 @@ E-commerce Front-end Project &#127793;
 <img align="center" src="src/assets/logo_verdeVista_gran.png" width="600">
 </h1>
 
-<p align="center">
-  <img src="assets/home-preview.gif" width="900">
-</p>
+![](https://github.com/Cocera/VerdeVista_frontend_ecommerce/blob/main/src/assets/home-preview.gif)
 
 Welcome to my frontend project for an E-commerce application! Here, our focus will be on developing a user interface using React. Throughout the development process, I aim to gain hands-on experience with React components, state management, and the overall React ecosystem. The integration of a self-developed backend adds an extra layer of understanding as I work on creating a seamless end-to-end experience for our E-commerce application.
 
 Feel free to explore both the frontend and backend codebases, provide feedback, or join me on this learning journey. Your input and suggestions are highly valued as I continue to refine my skills in both front-end and backend development with React.
 
 
-
-## 📝 Description
+## Description
 
 My frontend project aims to provide an intuitive user experience for an E-commerce platform. We'll implement key functionalities such as user registration, login, product visualization, cart management, order creation, and the ability to view user profiles.
-For the organization of the project I used the Trello tool following the Agile's methodology.
-
-### 🖥️ Core Components
 
 The frontend will consist of the following core components:
 
-- **Register:** Interface for users to register on the platform.
+- **Header:** It consists of an animated banner and the main navigation menu, made up of various components such as the user or the shopping cart.
+- **Home:** Main page of the application with banner component and product sections.
+- **Register:** Form interface for users to register on the website.
 - **Login:** Login screen for registered users.
-- **Home:** Main page of the application.
-- **Products:** View to display available products.
-- **Product:** Specific details of a product.
+- **Product feed:** View to display available products.
 - **Shopping Cart:** Functionality to manage products added to the cart.
-- **Profile:** Display of user data and their orders.
-- **Header:** Main navigation of the application.
-- **Footer:** Final section of the application.
-
-### 🌟  Extra
-- The user can see in his profile the orders
-- That is responsive
 
 ### 🌐 React Router and Context
 
 I'll use React Router to manage navigation between different views of the application. Additionally, I'll employ Context to handle global data efficiently.
 
-### 🎨 Design and Styling
+### Application design
 
-Design will play a crucial role in this project. I'll emphasize the importance of an attractive and user-friendly design. Moreover, I'll utilize SASS for style management and creating more dynamic interfaces.
+The role of styling applied with SASS has given me the opportunity to combine knowledge of branding and user experience with the development and construction of the web application. Providing visual coherence always taking into account the user's point of view.
 
 ### 📐 Constraints
 

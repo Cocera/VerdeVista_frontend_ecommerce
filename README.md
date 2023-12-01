@@ -3,7 +3,9 @@ E-commerce Front-end Project &#127793;
 <img align="center" src="src/assets/logo_verdeVista_gran.png" width="600">
 </h1>
 
-![](https://github.com/Cocera/VerdeVista_frontend_ecommerce/blob/main/src/assets/home-preview.gif)
+<p align="center">
+  <img src="https://github.com/Cocera/VerdeVista_frontend_ecommerce/blob/main/src/assets/home-preview.gif" alt="Preview">
+</p>
 
 Welcome to my frontend project for an E-commerce application! Here, our focus will be on developing a user interface using React. Throughout the development process, I aim to gain hands-on experience with React components, state management, and the overall React ecosystem. The integration of a self-developed backend adds an extra layer of understanding as I work on creating a seamless end-to-end experience for our E-commerce application.
 
@@ -23,20 +25,19 @@ The frontend will consist of the following core components:
 - **Product feed:** View to display available products.
 - **Shopping Cart:** Functionality to manage products added to the cart.
 
-### 🌐 React Router and Context
+## Applied knowledge and skills
+<ul>
 
+### React Router and Context
 I'll use React Router to manage navigation between different views of the application. Additionally, I'll employ Context to handle global data efficiently.
 
 ### Application design
-
 The role of styling applied with SASS has given me the opportunity to combine knowledge of branding and user experience with the development and construction of the web application. Providing visual coherence always taking into account the user's point of view.
 
-### 📐 Constraints
+### CSS with superpowers
+Application of SASS with its ease of creating application-wide style variables. 
 
-To maintain clean and readable code, I'll adhere to the following constraints:
-
-- Components won't exceed 400 lines of code.
-- Functions won't surpass 75 lines of code.
+</ul>
 
 ## Getting Started
 
@@ -64,22 +65,6 @@ Ensure you have Node.js installed in your development environment.
 ## Contributing
 
 🙌 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-🌟 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/YourName`)
-3. Commit your Changes (`git commit -m 'Add some YourName'`)
-4. Push to the Branch (`git push origin feature/YourName`)
-5. Open a Pull Request
-
-## Preview Workflow
-
-<p align="center">
-  <img src="src/assets/ecommerce_rentalscooter.gif" width="600">
-  <img src="src/assets/mockup-mobile.gif" width="150">
-</p>
 
 <p align="center">
   <!--REACT-->

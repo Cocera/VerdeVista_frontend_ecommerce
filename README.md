@@ -78,8 +78,6 @@ Ensure you have Node.js installed in your development environment.
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" alt="JavaScript">
   <!--SASS-->
   <img src="https://imgs.search.brave.com/nsFHtJ6IwaKdeVS0g-P5lXK7E28efyRej2yD3u15XfM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kMjlm/aHB3MDY5Y3R0Mi5j/bG91ZGZyb250Lm5l/dC9pY29uL2ltYWdl/LzM4NTY5L3ByZXZp/ZXcuc3Zn.svg" width="40" alt="Sass">
-  <!--ANTDESIGN-->
-  <img src="https://imgs.search.brave.com/0On1oCveocTdLccAaR4RAjEWnlrfCai3kQg3nW997CE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zZWVr/bG9nby5jb20vaW1h/Z2VzL0EvYW50LWRl/c2lnbi1sb2dvLUVB/QjZCM0Q1RDktc2Vl/a2xvZ28uY29tLnBu/Zw" width="40">
   <!--NPM-->
   <img src="https://imgs.search.brave.com/ziXbll6Eu_vanLF_3jITiNkpTCtx7YcJeFlLoeAvjIA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9naXRs/YWIuc3ZnLnpvbmUv/b21uaWFpdC9kZXZl/bG9wZXItbG9nb3Mv/cmF3L21hc3Rlci9s/b2dvcy9mcm9udC1l/bmQtd2ViL25wbS5z/dmc.svg" width="40">
 </p>

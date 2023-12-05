@@ -5,9 +5,8 @@ import { ProductContext } from '../../context/ProductContext/ProductState';
 
 const ShoppingCart = () => {
     const { cart, clearCart } = useContext(ProductContext);
-    const cartCheck = JSON.parse(localStorage.getItem('cart'));
 
-    if (cartCheck.length == 0) {
+    if (cart.length == 0) {
         return (
             <>
                 <main className='cart-main'>

@@ -25,8 +25,6 @@ The frontend will consist of the following core components:
 - **Product feed:** View to display available products.
 - **Shopping Cart:** Functionality to manage products added to the cart.
 
-https://github.com/Cocera/VerdeVista_frontend_ecommerce/blob/main/src/assets/VerdeVista_frontend.mp4
-
 ## Applied knowledge and skills
 <ul>
 
